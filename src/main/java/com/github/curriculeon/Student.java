@@ -1,9 +1,20 @@
 package com.github.curriculeon;
 
 
+import java.util.Arrays;
+import java.util.List;
+
 public class Student implements Comparable<Student> {
 
+    private String firstName;
+    private String lastName;
+    private List<Double> testScores;
+
     public Student(String firstName, String lastName, Double[] testScores) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.testScores = Arrays.asList(testScores);
+
     }
 
     public Student() {

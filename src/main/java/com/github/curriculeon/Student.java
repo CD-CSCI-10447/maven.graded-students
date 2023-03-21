@@ -2,6 +2,7 @@ package com.github.curriculeon;
 
 
 import java.util.Arrays;
+import java.util.Collection;
 import java.util.List;
 
 public class Student implements Comparable<Student> {
@@ -18,21 +19,23 @@ public class Student implements Comparable<Student> {
     }
 
     public Student() {
-
+        this.testScores = Arrays.asList(null);
     }
 
     public String getFirstName() {
-        return null;
+        return firstName;
     }
 
     public void setFirstName(String firstName) {
+        this.firstName = firstName;
     }
 
     public String getLastName() {
-        return null;
+        return lastName;
     }
 
     public void setLastName(String lastName) {
+        this.lastName = lastName;
     }
 
     public Double[] getExamScores() {

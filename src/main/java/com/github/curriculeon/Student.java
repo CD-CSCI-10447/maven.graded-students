@@ -39,19 +39,23 @@ public class Student implements Comparable<Student> {
     }
 
     public Double[] getExamScores() {
-        return null;
+        return testScores.toArray(new Double[0]);
     }
 
     public void addExamScore(double examScore) {
+        testScores.add(examScore);
     }
 
 
     public void setExamScore(int examNum, double updateScore) {
+        testScores.set(examNum,updateScore);
     }
 
 
     public Double getAverageExamScore() {
-        return null;
+        double x = 0;
+        for(double i : testScores) x += i;
+        return x / testScores.size();
     }
 
     @Override
@@ -65,7 +69,7 @@ public class Student implements Comparable<Student> {
      */
     @Override
     public int compareTo(Student studentToCompareAgainst) {
-        return Integer.valueOf(null);
+
     }
 }
 
